@@ -1,0 +1,27 @@
+{
+  "name": "react_chat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Vincent Moore",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.12.4",
+    "express": "^4.12.4",
+    "jsx-loader": "^0.13.2",
+    "material-ui": "^0.8.0",
+    "method-override": "^2.3.3",
+    "node-libs-browser": "^0.5.2",
+    "pusher": "^1.0.5",
+    "pusher-js": "^3.0.0",
+    "react": "^0.13.3",
+    "react-tap-event-plugin": "^0.1.7",
+    "reflux": "^0.2.7",
+    "underscore": "^1.8.3",
+    "uuid-v4": "^0.1.0",
+    "webpack": "^1.9.10"
+  }
+}
