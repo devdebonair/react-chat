@@ -8,7 +8,28 @@ var concierge = new Concierge();
 var ChatStore = Reflux.createStore({
 	listenables: [ChatActions],
 	user: {
-		rooms: {},
+		rooms: {
+			'1234': {
+				users: ['Arvell Webb Jr.'],
+				messages: ['i am interested'],
+				roomName: 'Arvell Webb Jr.'
+			},
+			'2345': {
+				users: ['Vincent Moore', 'Will Stahlberger', 'Brandon Manuel', 'Lamar C Benefield'],
+				messages: ['Lets doooo it'],
+				roomName: 'Will Stahlberger, Brandon Manuel, Lamar C Benefield'
+			},
+			'3456': {
+				users: ['catalyst'],
+				messages: ['Malena shared a link.'],
+				roomName: 'Malena Bravo'
+			},
+			'3645': {
+				users: ['Lebron Broadnax'],
+				messages: ['Oh cool I\'m gonna watch it after I get off'],
+				roomName: 'Lebron Broadnax'
+			}
+		},
 		username: '',
 		activeRooms: []
 	},
@@ -29,7 +50,7 @@ var ChatStore = Reflux.createStore({
 		var room = {
 			users: users,
 			messages: [],
-			roomName: users.join(',')
+			roomName: roomName || users.join(',')
 		};
 		$.get('/room/create', function(data){
 			this.user.rooms[uuid] = data.uuid;

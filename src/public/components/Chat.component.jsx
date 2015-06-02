@@ -9,6 +9,10 @@ var _ = require('underscore');
 var Typography = mui.Typography;
 var AppBar = mui.AppBar;
 
+var style = {
+	height: '100%'
+};
+
 var Chat = React.createClass({
 	mixins: [Reflux.connect(ChatStore, 'user')],
 	childContextTypes: {
@@ -27,12 +31,12 @@ var Chat = React.createClass({
 	render: function()
 	{
 		return (
-			<section>
+			<section stlye={style}>
 				<section className="col-lg-3">
 					<div className="row">
 						<AppBar title="React Chat" iconClassNameRight="fa fa-lg fa-pencil-square-o" onRightIconButtonTouchTap={this.handleCompose} />
 					</div>
-					<div className="row">
+					<div className="row" style={style}>
 						<RoomList rooms={_.values(this.state.user.rooms)} />
 					</div>
 				</section>
